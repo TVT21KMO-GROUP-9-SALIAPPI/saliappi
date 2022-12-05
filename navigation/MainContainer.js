@@ -53,9 +53,15 @@ function MainContainer() {
         })}
         >
         <Tab.Screen name={homeName} component={HomeScreen} />
-        <Tab.Screen name={addProgramName} component={AddProgramScreen} />
+        <Tab.Screen name={addProgramName} component={AddProgramScreen} options={{
+          tabBarButton: () => null,
+          tabBarVisible: false,
+        }}/>
         <Tab.Screen name={calendarName} component={CalendarScreen} />
-        <Tab.Screen name={ShowProgramName} component={ShowProgramScreen} />
+        <Tab.Screen name={ShowProgramName} component={ShowProgramScreen} options={{
+          tabBarButton: () => null,
+          tabBarVisible: false,
+        }}/>
       </Tab.Navigator>
     </NavigationContainer>    
   )
