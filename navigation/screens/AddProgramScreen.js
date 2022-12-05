@@ -1,10 +1,11 @@
-import { View, Text, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet, TextInput, Button } from 'react-native'
 import React from 'react'
 import { SelectList } from 'react-native-dropdown-select-list'
 import { useState } from 'react/cjs/react.development'
 
 const AddProgramScreen = ({ navigation }) => {
   const [selected, setSelected] = useState("")
+  const [text, setText] = useState("")
 
   const data = [
     {key:"1", value:"Penkkipunnerrus"},
@@ -22,10 +23,16 @@ const AddProgramScreen = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
+      <TextInput 
+        style={styles.input}
+        onChangeText={setText}
+        value={text}
+        placeholder="Ohjelman nimi:"
+      />
       <SelectList 
         data={data} 
         setSelected={setSelected} 
-        boxStyles={{ marginHorizontal: 100, marginVertical: 20, backgroundColor:"white" }}
+        boxStyles={{ marginRight: 200, marginLeft: 10, marginVertical: 20, backgroundColor:"white" }}
         inputStyles={{ fontSize: 16 }}
         dropdownStyles={{ backgroundColor: "gray" }}
         dropdownItemStyles={{ marginHorizontal: 10 }}
@@ -36,7 +43,7 @@ const AddProgramScreen = ({ navigation }) => {
       <SelectList 
         data={data} 
         setSelected={setSelected} 
-        boxStyles={{ marginHorizontal: 100, marginBottom: 20, backgroundColor:"white" }}
+        boxStyles={{ marginRight: 200, marginLeft: 10, marginBottom: 20, backgroundColor:"white" }}
         inputStyles={{ fontSize: 16 }}
         dropdownStyles={{ backgroundColor: "gray" }}
         dropdownItemStyles={{ marginHorizontal: 10 }}
@@ -47,7 +54,7 @@ const AddProgramScreen = ({ navigation }) => {
       <SelectList 
         data={data} 
         setSelected={setSelected} 
-        boxStyles={{ marginHorizontal: 100, marginBottom: 20, backgroundColor:"white" }}
+        boxStyles={{ marginRight: 200, marginLeft: 10, marginBottom: 20, backgroundColor:"white" }}
         inputStyles={{ fontSize: 16 }}
         dropdownStyles={{ backgroundColor: "gray" }}
         dropdownItemStyles={{ marginHorizontal: 10 }}
@@ -58,7 +65,7 @@ const AddProgramScreen = ({ navigation }) => {
       <SelectList 
         data={data} 
         setSelected={setSelected} 
-        boxStyles={{ marginHorizontal: 100, marginBottom: 20, backgroundColor:"white" }}
+        boxStyles={{ marginRight: 200, marginLeft: 10, marginBottom: 20, backgroundColor:"white" }}
         inputStyles={{ fontSize: 16 }}
         dropdownStyles={{ backgroundColor: "gray" }}
         dropdownItemStyles={{ marginHorizontal: 10 }}
@@ -69,7 +76,7 @@ const AddProgramScreen = ({ navigation }) => {
       <SelectList 
         data={data} 
         setSelected={setSelected} 
-        boxStyles={{ marginHorizontal: 100, marginBottom: 20, backgroundColor:"white" }}
+        boxStyles={{ marginRight: 200, marginLeft: 10, marginBottom: 20, backgroundColor:"white" }}
         inputStyles={{ fontSize: 16 }}
         dropdownStyles={{ backgroundColor: "gray" }}
         dropdownItemStyles={{ marginHorizontal: 10 }}
@@ -80,7 +87,7 @@ const AddProgramScreen = ({ navigation }) => {
       <SelectList 
         data={data} 
         setSelected={setSelected} 
-        boxStyles={{ marginHorizontal: 100, marginBottom: 20, backgroundColor:"white" }}
+        boxStyles={{ marginRight: 200, marginLeft: 10, marginBottom: 20, backgroundColor:"white" }}
         inputStyles={{ fontSize: 16 }}
         dropdownStyles={{ backgroundColor: "gray" }}
         dropdownItemStyles={{ marginHorizontal: 10 }}
@@ -88,6 +95,9 @@ const AddProgramScreen = ({ navigation }) => {
         placeholder="Valitse liike 6:"
         maxHeight={300}
       />
+      <View style={styles.button}>
+        <Button title='Luo ohjelma' color="#22C55E" onPress={() => navigation.navigate('Ohjelmat')}/>
+      </View>
     </View>
   )
 }
@@ -96,7 +106,23 @@ const styles = StyleSheet.create({
   container: {
    flex: 1,
    backgroundColor: "#FFEDD5",
-   
+  },
+  input: {
+    backgroundColor: "white",
+    height: 50,
+    width: 210,
+    marginTop: 20,
+    alignSelf: "center",
+    fontSize: 16,
+    borderColor: "black",
+    borderWidth: 1,
+    borderRadius: 10,
+    paddingHorizontal: 20
+  },
+  button: {
+    width: "50%",
+    alignSelf: "center",
+    marginTop: 20
   }
 });
 
