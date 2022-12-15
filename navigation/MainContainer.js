@@ -16,6 +16,7 @@ const ShowProgramName = "Näytä ohjelma"
 const Tab = createBottomTabNavigator();
 
 function MainContainer() {
+  
   return (
     <NavigationContainer>
       <Tab.Navigator
