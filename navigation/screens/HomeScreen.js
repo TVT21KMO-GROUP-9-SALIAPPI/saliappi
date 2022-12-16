@@ -22,12 +22,12 @@ if (!loaded) {
     return null
 }
 
-/*
+
 const route = useRoute()
 
 const prog1 = route.params?.prog1
 console.log(prog1);
-*/
+
 
 const programs = (
  <View style={styles.progsContainer}>

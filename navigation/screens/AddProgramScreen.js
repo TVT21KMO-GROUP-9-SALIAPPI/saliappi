@@ -244,7 +244,7 @@ const AddProgramScreen = ({ navigation }) => {
       />
       </View>
       <View style={styles.button}>
-        <Button title='Luo ohjelma' color="#22C55E" onPress={() => navigation.navigate('Näytä ohjelma')}/>
+        <Button title='Luo ohjelma' color="#22C55E" onPress={() => navigation.navigate({name: 'Ohjelmat', params: {prog1: addedProg}, merge: true})}/>
       </View>
     </ScrollView>
   )
