@@ -44,17 +44,22 @@ const AddProgramScreen = ({ navigation }) => {
 }
 
   const exercises = [
-    {key:"1", value:"Penkkipunnerrus"},
-    {key:"2", value:"Vinopenkkipunnerrus"},
-    {key:"3", value:"Kulmasoutu"},
-    {key:"4", value:"Ylätalja"},
-    {key:"5", value:"Alatalja"},
-    {key:"6", value:"Pystypunnerrus"},
-    {key:"7", value:"Vipunosto sivulle"},
-    {key:"8", value:"Hauiskääntö tangolla"},
-    {key:"9", value:"Hauiskäänto käsipainolla"},
-    {key:"10", value:"Ranskalainen punnerrus"},
-    {key:"11", value:"Pushdown köydellä"}
+    {key:"Penkkipunnerrus", value:"Penkkipunnerrus"},
+    {key:"Vinopenkkipunnerrus", value:"Vinopenkkipunnerrus"},
+    {key:"Kulmasoutu", value:"Kulmasoutu"},
+    {key:"Ylätalja", value:"Ylätalja"},
+    {key:"Alatalja", value:"Alatalja"},
+    {key:"Pystypunnerrus", value:"Pystypunnerrus"},
+    {key:"Vipunosto sivulle", value:"Vipunosto sivulle"},
+    {key:"Hauiskääntö tangolla", value:"Hauiskääntö tangolla"},
+    {key:"Hauiskäänto käsipainolla", value:"Hauiskäänto käsipainolla"},
+    {key:"Ranskalainen punnerrus", value:"Ranskalainen punnerrus"},
+    {key:"Pushdown köydellä", value:"Pushdown köydellä"},
+    {key:"Takakyykky", value:"Takakyykky"},
+    {key:"Jalkaprässi", value:"Jalkaprässi"},
+    {key:"Reiden ojennus", value:"Reiden ojennus"},
+    {key:"Reiden koukistus", value:"Reiden koukistus"},
+    {key:"Pohkeet istuen", value:"Pohkeet istuen"}
   ]
 
   const sets = [
@@ -95,6 +100,7 @@ const AddProgramScreen = ({ navigation }) => {
       />
       </View>
       <View style= {{ borderBottomColor: "#A8A29E", borderBottomWidth: 2}}>
+        <Text style={styles.text}>Liike 1:</Text>
       <SelectList 
         data={exercises} 
         setSelected={setSelected1} 
@@ -103,7 +109,7 @@ const AddProgramScreen = ({ navigation }) => {
         dropdownStyles={{ backgroundColor: "gray" }}
         dropdownItemStyles={{ marginHorizontal: 10 }}
         dropdownTextStyles={{ color: "white", fontSize: 16 }}
-        placeholder="Valitse liike 1:"
+        placeholder="Valitse liike"
         maxHeight={300}
       />
 
@@ -121,15 +127,16 @@ const AddProgramScreen = ({ navigation }) => {
       </View>
 
       <View style= {{ borderBottomColor: "#A8A29E", borderBottomWidth: 2}}>
+      <Text style={styles.text}>Liike 2:</Text>
       <SelectList 
         data={exercises} 
-        setSelected={setSelected2} 
+        setSelected={setSelected2}
         boxStyles={{ marginHorizontal: 50, marginVertical: 20, backgroundColor:"white" }}
         inputStyles={{ fontSize: 16 }}
         dropdownStyles={{ backgroundColor: "gray" }}
         dropdownItemStyles={{ marginHorizontal: 10 }}
         dropdownTextStyles={{ color: "white", fontSize: 16 }}
-        placeholder="Valitse liike 2:"
+        placeholder="Valitse liike"
         maxHeight={300}
       />
       <SelectList 
@@ -146,6 +153,7 @@ const AddProgramScreen = ({ navigation }) => {
       </View>
 
       <View style= {{ borderBottomColor: "#A8A29E", borderBottomWidth: 2}}>
+      <Text style={styles.text}>Liike 3:</Text>
       <SelectList 
         data={exercises} 
         setSelected={setSelected3} 
@@ -154,7 +162,7 @@ const AddProgramScreen = ({ navigation }) => {
         dropdownStyles={{ backgroundColor: "gray" }}
         dropdownItemStyles={{ marginHorizontal: 10 }}
         dropdownTextStyles={{ color: "white", fontSize: 16 }}
-        placeholder="Valitse liike 3:"
+        placeholder="Valitse liike"
         maxHeight={300}
       />
       <SelectList 
@@ -171,6 +179,7 @@ const AddProgramScreen = ({ navigation }) => {
       </View>
 
       <View style= {{ borderBottomColor: "#A8A29E", borderBottomWidth: 2}}>
+      <Text style={styles.text}>Liike 4:</Text>
       <SelectList 
         data={exercises} 
         setSelected={setSelected4} 
@@ -179,7 +188,7 @@ const AddProgramScreen = ({ navigation }) => {
         dropdownStyles={{ backgroundColor: "gray" }}
         dropdownItemStyles={{ marginHorizontal: 10 }}
         dropdownTextStyles={{ color: "white", fontSize: 16 }}
-        placeholder="Valitse liike 4:"
+        placeholder="Valitse liike"
         maxHeight={300}
       />
       <SelectList 
@@ -196,6 +205,7 @@ const AddProgramScreen = ({ navigation }) => {
       </View>
 
       <View style= {{ borderBottomColor: "#A8A29E", borderBottomWidth: 2}}>
+      <Text style={styles.text}>Liike 5:</Text>
       <SelectList 
         data={exercises} 
         setSelected={setSelected5} 
@@ -204,7 +214,7 @@ const AddProgramScreen = ({ navigation }) => {
         dropdownStyles={{ backgroundColor: "gray" }}
         dropdownItemStyles={{ marginHorizontal: 10 }}
         dropdownTextStyles={{ color: "white", fontSize: 16 }}
-        placeholder="Valitse liike 5:"
+        placeholder="Valitse liike"
         maxHeight={300}
       />
       <SelectList 
@@ -220,6 +230,7 @@ const AddProgramScreen = ({ navigation }) => {
       />
       </View>
       <View style= {{ borderBottomColor: "#A8A29E", borderBottomWidth: 2}}>
+      <Text style={styles.text}>Liike 6:</Text>
       <SelectList 
         data={exercises} 
         setSelected={setSelected6} 
@@ -228,7 +239,7 @@ const AddProgramScreen = ({ navigation }) => {
         dropdownStyles={{ backgroundColor: "gray" }}
         dropdownItemStyles={{ marginHorizontal: 10 }}
         dropdownTextStyles={{ color: "white", fontSize: 16 }}
-        placeholder="Valitse liike 6:"
+        placeholder="Valitse liike"
         maxHeight={300}
       />
       <SelectList 
@@ -272,6 +283,11 @@ const styles = StyleSheet.create({
     alignSelf: "center",
     marginTop: 20,
     marginBottom: 100
+  },
+  text: {
+    fontSize: 20,
+    textAlign: "center",
+    marginTop: 10
   }
 });
 
